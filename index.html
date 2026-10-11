@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chess — By CODEWITHSEMPAI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <section class="board-col">
+    <div class="player top"><span class="avatar" id="topAv">♚</span><span id="topName">Black</span><span class="turn" id="topTurn">● Playing</span><span class="caps" id="topCaps"></span></div>
+    <div class="board-wrap"><div id="board" class="board"></div></div>
+    <div class="player bottom"><span class="avatar" id="botAv">♔</span><span id="botName">White</span><span class="turn" id="botTurn">● Playing</span><span class="caps" id="botCaps"></span></div>
+  </section>
+  <aside class="panel">
+    <h1>♞ Chess</h1>
+    <div class="status" id="status"></div>
+    <div class="mode">
+      <label>Mode
+        <select id="mode"><option value="2p">2 Players</option><option value="ai">vs Computer</option></select>
+      </label>
+      <label id="lvlWrap" hidden>Level
+        <select id="level"><option value="1">Easy</option><option value="2" selected>Normal</option><option value="3">Hard</option><option value="4">Pro</option></select>
+      </label>
+    </div>
+    <div class="moves" id="moves"></div>
+    <div class="actions">
+      <button id="bNew" class="primary">New Game</button>
+      <button id="bUndo">Undo</button>
+      <button id="bFlip">Flip</button>
+      <button id="bFen">Copy FEN</button>
+    </div>
+    <footer>Created by <b>Dayanithi</b></footer>
+  </aside>
+</main>
+<div class="overlay" id="promo" hidden><div class="dialog" id="promoBox"></div></div>
+<div class="overlay" id="end" hidden><div class="dialog"><h2 id="endTitle"></h2><p id="endMsg"></p><button class="primary" id="endBtn">Play again</button></div></div>
+<script src="game.js"></script>
+</body>
+</html>
